@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rica's Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b5b682;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 101%;
+            max-width: 100%;
+        }
+        html, body {
+             margin: 0;
+             padding: 0;
+             width: 100%;
+             overflow-x: hidden;
+
+        header {
+            background: #4488BF;
+            color: #FFEE93;
+            padding: 15px;
+            text-align: center;
+            width: 101%;
+            max-width: 100%; 
+            box-sizing: border-box;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            width: 20%;
+            background: #FFEE93;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        nav a {
+            display: block;
+            color: #FFEE93;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            margin: 5px 0;
+            background: #4488BF;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background: #081F5C;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            transition: background 0.5s ease-in-out;
+            min-height: 100vh;
+        }
+
+        footer {
+            background: #4488BF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 101%;
+        }
+
+        .styled-heading {
+            font-family: "Monotype Corsiva", cursive;
+            font-size: 40px;
+            color: white;
+            font-style: italic;
+            background-color: #033f63;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .styled-text {
+            font-family: "Monotype Corsiva", cursive;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            font-style: italic;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .image-collage img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border-radius: 10px;
+        
+        .main-container {
+                height: 100vh;
+        }
+    </style>
+
+    <script>
+        function loadContent(section) {
+            const content = {
+                home: `<h2 class="styled-heading">Hey there!</h2>
+                       <p class="styled-text">Take a look around to discover more of my favorites songs and movies.</p>
+                       <div class="image-collage">
+                           <img src="image2.jpg" alt="Image 1">
+                           <img src="image7.jpg" alt="Image 2">
+                           <img src="image4.jpg" alt="Image 3">
+                           <img src="image1.jpg" alt="Image 4">
+                           <img src="image5.jpg" alt="Image 5">
+                           <img src="image3.jpg" alt="Image 6">
+                       </div>` ,
+                
+                music: `<h2 class="styled-heading">🎶 My Favorite Songs</h2>
+                        <ul class="styled-text">
+                            <li>My Love Mine All Mine - Mitski</li>
+                            <li>About You - The 1975</li>
+                            <li>Season - Wave to Earth</li>
+                            <li>Secret Door - Artic Monkeys</li>
+                            <li>Tsunami - NIKI</li>
+                            <li>The Side of Paradise - Coyote Theory</li>
+                            <li>Valentine - Laufey</li>
+                            <li>Birds of the Feather - Billie Eilish</li>
+                            <li>Favorite Lesson - Yaeow</li>
+                            <li>Heavenly - Cigarette After Sex</li>
+                            <li>Willow - Taylor Swift</li>
+                            <li>Margaret - Lana Del Rey</li>
+                            <li>Waltz of Four Left Feet - Shirebound and Busking</li>
+                            
+                        </ul>` ,
+                
+                        movies: `<h2 class="styled-heading">🎬 My Favorite Movies</h2>
+                         <h3 class="styled-text">🎭 Romantic Movies</h3>
+                         <ul class="styled-text">
+                            <li>The Perks of Being a Wallflower</li>
+                            <li>10 Things I Hate About You</li>
+                            <li>Me Before You</li>
+                            <li>Pride and Prejudice</li>
+                            <li>How to Lose a Guy in 10 Days</li>
+                            <li>Enchanted</li>
+                         </ul>
+                         
+                         <h3 class="styled-text">🎬 Animated Movies</h3>
+                         <ul class="styled-text">
+                            <li>Howl's Moving Castle</li>
+                            <li>Zootopia</li>
+                            <li>Corpse Bride</li>
+                            <li>The Book of Life</li>
+                            <li>Sing</li>
+                            <li>Hotel Transylvania</li>
+                            <li>Rio</li>
+                            <li>Despicable Me</li>
+                            <li>Tangled</li>
+                            <li>Spirited Away</li>
+                            <li>How to Train Your Dragon</li>
+
+        
+                         </ul>
+
+                         <h3 class="styled-text">😱 Horror/Thriller</h3>
+                         <ul class="styled-text">
+                            <li>Smile</li>
+                            <li>The Conjuring</li>
+                            <li>Evil Dead</li>
+                            <li>Insidious</li>
+                            <li>The witch</li>
+
+                         </ul>
+
+                         <h3 class="styled-text">🎭 Drama</h3>
+                         <ul class="styled-text">
+                            <li>500 Days of Summer</li>
+                            <li>Drawing Closer</li>
+                            <li>Better Days</li>
+                            <li>Our Times</li>
+                            <li>A Man Called Otto</li>
+                            <li>On Your Wedding Day</li>
+
+                         </ul>
+
+                         <h3 class="styled-text">🤣 Comedy</h3>
+                         <ul class="styled-text">
+                            <li>White Chicks</li>
+                            <li>Midnight Runners</li>
+                         </ul>
+
+                         <h3 class="styled-text">💥 Action/Fantasy</h3>
+                         <ul class="styled-text">
+                            <li>Harry Potter</li>
+                            <li>Avengers</li>
+                            <li>Along with the Gods</li>
+                            <li>Miss Peregrine's Home for Peculiar Children</li>
+                            <li>Fantastic Beasts</li>
+                         </ul>`
+            };
+            document.getElementById("content").innerHTML = content[section];
+        
+            const container = document.getElementById("content");
+            if (section === 'home') {
+                container.style.backgroundColor = '#577ba2';
+            } else if (section === 'music') {
+                container.style.backgroundColor = '#5d699c';
+            } else if (section === 'movies') {
+                container.style.backgroundColor = '#7C9885';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+
+    <div class="main-container">
+    
+        <nav>
+            <a onclick="loadContent('home')">Home</a>
+            <a onclick="loadContent('movies')">My Favorite Movies</a>
+            <a onclick="loadContent('music')">My Favorite Songs</a>
+        </nav>
+
+        <div class="container" id="content">
+            <h2>Welcome!</h2>
+            <p>Select a category from the menu to explore my favorite movies and songs!</p>
+            <img src="image8.jpg" alt="Image 1">
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 My Web Page. All Rights Reserved.
+    </footer>
+</body>
+</html>
